@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/source_image"
+            app:riv_oval="true"
+            android:layout_width="50dp"
+            android:src="@mipmap/response01"
+            android:layout_height="50dp"
+          />
+
+        <TextView
+            android:id="@+id/source_title"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/source_image"
+            android:text="科学人" />
+
+        <TextView
+            android:id="@+id/source_summary"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/source_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/source_image"
+            android:text="科学人" />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="标题"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/headline_img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher_round" />
+
+</LinearLayout>
