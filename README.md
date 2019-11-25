@@ -1,0 +1,3 @@
+# RecycleView_Multi_Layout
+RecyclerView添加头部尾部和中间插入自定义View
+SVID_20191123_225621_1_20191123234224.gif
