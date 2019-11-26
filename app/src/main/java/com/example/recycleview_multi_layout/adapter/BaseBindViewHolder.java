@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.recycleview_multi_layout.Model;
 import com.example.recycleview_multi_layout.R;
-import com.example.recycleview_multi_layout.RecyclerAdapter;
-import com.example.recycleview_multi_layout.XImageOptions;
+import com.example.recycleview_multi_layout.model.ResultModel;
+import com.example.recycleview_multi_layout.xutls.XImageOptions;
+import com.example.recycleview_multi_layout.model.Model;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class BaseBindViewHolder {
 
-    public void onBindViewHolder0(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder0(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         List<Integer> list = new ArrayList<>();
         list.add(R.mipmap.response01);
         list.add(R.mipmap.response02);
@@ -33,47 +33,47 @@ public class BaseBindViewHolder {
                 .start();
     }
 
-    private List<Fruit> fruitList = new ArrayList<>();
+    private List<Model> modelList = new ArrayList<>();
 
-    public void onBindTYPE_MIDDLE_TWO(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans, Context context) {
+    public void onBindTYPE_MIDDLE_TWO(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans, Context context) {
         initFruits();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         ((BaseViewHolder) holder).recyclerView.setLayoutManager(layoutManager);
-        RecyclerAdapter adapter = new RecyclerAdapter(fruitList);
+        RecyclerAdapter adapter = new RecyclerAdapter(modelList);
         ((BaseViewHolder) holder).recyclerView.setAdapter(adapter);
 
     }
 
     private void initFruits() {
         for (int i = 0; i < 2; i++) {
-            Fruit apple = new Fruit("秋～长腿梦梦", R.mipmap.response01);
-            fruitList.add(apple);
-            Fruit banana = new Fruit("星源汤圆", R.mipmap.response02);
-            fruitList.add(banana);
-            Fruit orange = new Fruit("秋~杨嘉", R.mipmap.response03);
-            fruitList.add(orange);
-            Fruit watermelon = new Fruit("秋~芳丫头", R.mipmap.response04);
-            fruitList.add(watermelon);
-            Fruit pear = new Fruit("c_没人疼", R.mipmap.response05);
-            fruitList.add(pear);
-            Fruit grape = new Fruit("CJ~花花", R.mipmap.response06);
-            fruitList.add(grape);
-            Fruit pineapple = new Fruit("c_没人疼", R.mipmap.response01);
-            fruitList.add(pineapple);
-            Fruit strawberry = new Fruit("c_没人疼", R.mipmap.response01);
-            fruitList.add(strawberry);
-            Fruit cherry = new Fruit("星源汤圆", R.mipmap.response01);
-            fruitList.add(cherry);
-            Fruit mango = new Fruit("星源汤圆", R.mipmap.response01);
-            fruitList.add(mango);
+            Model apple = new Model("秋～长腿梦梦", R.mipmap.response01);
+            modelList.add(apple);
+            Model banana = new Model("星源汤圆", R.mipmap.response02);
+            modelList.add(banana);
+            Model orange = new Model("秋~杨嘉", R.mipmap.response03);
+            modelList.add(orange);
+            Model watermelon = new Model("秋~芳丫头", R.mipmap.response04);
+            modelList.add(watermelon);
+            Model pear = new Model("c_没人疼", R.mipmap.response05);
+            modelList.add(pear);
+            Model grape = new Model("CJ~花花", R.mipmap.response06);
+            modelList.add(grape);
+            Model pineapple = new Model("c_没人疼", R.mipmap.response01);
+            modelList.add(pineapple);
+            Model strawberry = new Model("c_没人疼", R.mipmap.response01);
+            modelList.add(strawberry);
+            Model cherry = new Model("星源汤圆", R.mipmap.response01);
+            modelList.add(cherry);
+            Model mango = new Model("星源汤圆", R.mipmap.response01);
+            modelList.add(mango);
 
         }
     }
 
 
-    public void onBindViewHolder1(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder1(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
         if (!TextUtils.isEmpty(listBeans.get(pos).getHeadline_img())) {
@@ -85,7 +85,7 @@ public class BaseBindViewHolder {
 
     }
 
-    public void onBindViewHolder2(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder2(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
         XImageOptions.imageData(((BaseViewHolder) holder).headlineImg, listBeans.get(pos).getHeadline_img());
@@ -94,7 +94,7 @@ public class BaseBindViewHolder {
 
     }
 
-    public void onBindViewHolder3(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder3(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
         ((BaseViewHolder) holder).summary.setText(listBeans.get(pos).getSummary());
@@ -102,7 +102,7 @@ public class BaseBindViewHolder {
 
     }
 
-    public void onBindViewHolder4(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder4(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
 
@@ -113,7 +113,7 @@ public class BaseBindViewHolder {
     }
 
 
-    public void onBindViewHolder5(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder5(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
 
@@ -123,7 +123,7 @@ public class BaseBindViewHolder {
 
     }
 
-    public void onBindViewHolder6(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder6(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
         ((BaseViewHolder) holder).sourceTitle.setText(listBeans.get(pos).getSource_data().getTitle());
@@ -134,7 +134,7 @@ public class BaseBindViewHolder {
     }
 
 
-    public void onBindViewHolder7(RecyclerView.ViewHolder holder, List<Model.ResultBean> listBeans) {
+    public void onBindViewHolder7(RecyclerView.ViewHolder holder, List<ResultModel.ResultBean> listBeans) {
         final int pos = getRealPosition(holder);
         ((BaseViewHolder) holder).title.setText(listBeans.get(pos).getTitle());
 

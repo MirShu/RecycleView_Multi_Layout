@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recycleview_multi_layout.Model;
+import com.example.recycleview_multi_layout.model.ResultModel;
 import com.example.recycleview_multi_layout.R;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public  class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private View mHeaderView;
     private View mMiddleView;
     private View mMiddleView2;
-    private List<Model.ResultBean> listBeans;
+    private List<ResultModel.ResultBean> listBeans;
     private OnClickListener mItemClickListener;
     BaseBindViewHolder baseBindViewHolder=new BaseBindViewHolder();
     private Context mContext;
@@ -51,7 +51,7 @@ public  class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         mMiddleView2 = middleView2;
     }
 
-    public Adapter(List<Model.ResultBean> list, Context context) {
+    public Adapter(List<ResultModel.ResultBean> list, Context context) {
         this.listBeans = list;
         this.mContext = context;
 

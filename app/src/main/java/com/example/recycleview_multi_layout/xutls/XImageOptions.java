@@ -1,6 +1,8 @@
-package com.example.recycleview_multi_layout;
+package com.example.recycleview_multi_layout.xutls;
 
 import android.widget.ImageView;
+
+import com.example.recycleview_multi_layout.R;
 
 import org.xutils.common.util.DensityUtil;
 import org.xutils.x;

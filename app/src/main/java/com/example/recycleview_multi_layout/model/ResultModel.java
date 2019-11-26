@@ -1,9 +1,9 @@
-package com.example.recycleview_multi_layout;
+package com.example.recycleview_multi_layout.model;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class Model implements Serializable {
+public class ResultModel implements Serializable {
 
 
     private String now;

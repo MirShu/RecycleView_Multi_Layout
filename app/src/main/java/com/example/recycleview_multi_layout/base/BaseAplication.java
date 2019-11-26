@@ -1,4 +1,4 @@
-package com.example.recycleview_multi_layout;
+package com.example.recycleview_multi_layout.base;
 
 import android.app.Application;
 

@@ -59,4 +59,54 @@
 
     </LinearLayout>
 
+
+
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_follow_top_enter_brand"
+            android:text="排行榜"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:drawablePadding="5dp"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_follow_top_enter_category"
+            android:text="优惠日"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_follow_top_enter_define"
+            android:text="精选品"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_follow_top_enter_user"
+            android:text="白菜区"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.recycleview_multi_layout;
+package com.example.recycleview_multi_layout.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +8,14 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recycleview_multi_layout.adapter.Fruit;
+import com.example.recycleview_multi_layout.R;
+import com.example.recycleview_multi_layout.model.Model;
 
 import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    private List<Fruit> mFruitList;
+    private List<Model> mModelList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView fruitImage;
@@ -28,8 +29,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     }
 
-    public RecyclerAdapter(List<Fruit> fruitList) {
-        mFruitList = fruitList;
+    public RecyclerAdapter(List<Model> modelList) {
+        mModelList = modelList;
     }
 
     @Override
@@ -43,13 +44,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        Fruit fruit = mFruitList.get(position);
-        holder.fruitImage.setImageResource(fruit.getImageId());
-        holder.fruitName.setText(fruit.getName());
+        Model model = mModelList.get(position);
+        holder.fruitImage.setImageResource(model.getImageId());
+        holder.fruitName.setText(model.getName());
     }
 
     @Override
     public int getItemCount() {
-        return mFruitList.size();
+        return mModelList.size();
     }
 }
