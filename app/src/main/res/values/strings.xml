@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">RecycleView_Multi_Layout</string>
+    <string name="app_name">小燕子</string>
 
     <string name="navigation_navigation_bar">NavigationBar</string>
     <string name="navigation_tab_host">TabHost</string>
 
     <string name="item_home">主页</string>
-    <string name="item_location">选购</string>
-    <string name="item_like">探索</string>
-    <string name="item_shop_car">购物车</string>
+    <string name="item_location">漫画</string>
+    <string name="item_like">聊天</string>
+    <string name="item_shop_car">电视节目</string>
     <string name="item_person">我的</string>
 </resources>

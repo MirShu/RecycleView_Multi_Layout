@@ -1,4 +1,4 @@
-package com.example.recycleview_multi_layout.ui.fragment;
+package com.example.recycleview_multi_layout.ui.fragment.main_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.example.recycleview_multi_layout.R;
+import com.example.recycleview_multi_layout.ui.fragment.NewsFragment;
 import com.example.recycleview_multi_layout.xutls.Constants;
 
 
@@ -23,11 +24,11 @@ public class NavigationFragment extends Fragment implements BottomNavigationBar.
 
 
     private BottomNavigationBar mBottomNavigationBar;
-    private HomeFragment mHomeFragment;
-    private LocationFragment mLocationFragment;
-    private LikeFragment mLikeFragment;
-    private ShopCarFragment mShopCarFragment;
-    private PersonFragment mPersonFragment;
+    private NewsFragment mMainHomeFragment;
+    private MainCartoonFragment mMainCartoonFragment;
+    private MainChatFragment mMainChatFragment;
+    private MainTVFragment mMainTVFragment;
+    private MainMeFragment mMainMeFragment;
 
     public static NavigationFragment newInstance(String s) {
         NavigationFragment navigationFragment = new NavigationFragment();
@@ -63,8 +64,8 @@ public class NavigationFragment extends Fragment implements BottomNavigationBar.
      */
     private void setDefaultFragment() {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        HomeFragment homeFragment = mHomeFragment.newInstance(getString(R.string.item_home));
-        transaction.replace(R.id.sub_content, homeFragment).commit();
+        NewsFragment mainHomeFragment = mMainHomeFragment.newInstance(getString(R.string.item_home));
+        transaction.replace(R.id.sub_content, mainHomeFragment).commit();
 
     }
 
@@ -74,35 +75,35 @@ public class NavigationFragment extends Fragment implements BottomNavigationBar.
 
         switch (position) {
             case 0:
-                if (mHomeFragment == null) {
-                    mHomeFragment = HomeFragment.newInstance(getString(R.string.item_home));
+                if (mMainHomeFragment == null) {
+                    mMainHomeFragment = NewsFragment.newInstance(getString(R.string.item_home));
                 }
-                beginTransaction.replace(R.id.sub_content, mHomeFragment);
+                beginTransaction.replace(R.id.sub_content, mMainHomeFragment);
                 break;
             case 1:
-                if (mLocationFragment == null) {
-                    mLocationFragment = LocationFragment.newInstance(getString(R.string.item_location));
+                if (mMainCartoonFragment == null) {
+                    mMainCartoonFragment = MainCartoonFragment.newInstance(getString(R.string.item_location));
                 }
-                beginTransaction.replace(R.id.sub_content, mLocationFragment);
+                beginTransaction.replace(R.id.sub_content, mMainCartoonFragment);
                 break;
             case 2:
-                if (mLikeFragment == null) {
-                    mLikeFragment = LikeFragment.newInstance(getString(R.string.item_like));
+                if (mMainChatFragment == null) {
+                    mMainChatFragment = MainChatFragment.newInstance(getString(R.string.item_like));
                 }
-                beginTransaction.replace(R.id.sub_content, mLikeFragment);
+                beginTransaction.replace(R.id.sub_content, mMainChatFragment);
                 break;
             case 3:
-                if (mShopCarFragment == null) {
-                    mShopCarFragment = ShopCarFragment.newInstance(getString(R.string.item_shop_car));
+                if (mMainTVFragment == null) {
+                    mMainTVFragment = MainTVFragment.newInstance(getString(R.string.item_shop_car));
                 }
-                beginTransaction.replace(R.id.sub_content, mShopCarFragment);
+                beginTransaction.replace(R.id.sub_content, mMainTVFragment);
                 break;
 
             case 4:
-                if (mPersonFragment == null) {
-                    mPersonFragment = PersonFragment.newInstance(getString(R.string.item_person));
+                if (mMainMeFragment == null) {
+                    mMainMeFragment = MainMeFragment.newInstance(getString(R.string.item_person));
                 }
-                beginTransaction.replace(R.id.sub_content, mPersonFragment);
+                beginTransaction.replace(R.id.sub_content, mMainMeFragment);
                 break;
 
         }

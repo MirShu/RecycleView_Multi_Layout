@@ -10,4 +10,5 @@
     <color name="black">#000000</color>
     <color name="black_1">#d1d1d1</color>
     <color name="amber">#BBFFC107</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
 </resources>

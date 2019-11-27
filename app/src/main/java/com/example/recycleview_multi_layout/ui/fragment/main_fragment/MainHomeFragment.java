@@ -1,4 +1,4 @@
-package com.example.recycleview_multi_layout.ui.fragment;
+package com.example.recycleview_multi_layout.ui.fragment.main_fragment;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.recycleview_multi_layout.R;
 import com.example.recycleview_multi_layout.adapter.Adapter;
 import com.example.recycleview_multi_layout.model.ResultModel;
-import com.example.recycleview_multi_layout.xutls.Constants;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -29,12 +28,20 @@ import java.util.List;
  * Description:
  */
 
-public class HomeFragment extends Fragment {
+public class MainHomeFragment extends Fragment {
     private RecyclerView mRvView;
     private Adapter mAdapter;
     private List<ResultModel.ResultBean> mList = new ArrayList<>();
-    private LinearLayoutManager mLayoutManager;
+    private static final String ARG_POSITION = "position";
 
+
+    public static MainHomeFragment newInstance(int position) {
+        MainHomeFragment newsChannelFragment = new MainHomeFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt(ARG_POSITION, position);
+        newsChannelFragment.setArguments(bundle);
+        return newsChannelFragment;
+    }
 
     //添加头部
     private void setHeader(RecyclerView view) {
@@ -54,22 +61,13 @@ public class HomeFragment extends Fragment {
         mAdapter.setMiddleView2(middle2);
     }
 
-    public static HomeFragment newInstance(String s) {
-        HomeFragment homeFragment = new HomeFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.ARGS, s);
-        homeFragment.setArguments(bundle);
-        return homeFragment;
-    }
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-
-        mRvView = view.findViewById(R.id.rv_test);
-        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRvView = view.findViewById(R.id.home_news_rview);
         mRvView.setLayoutManager(new LinearLayoutManager(getActivity()));
         getData();
         return view;
