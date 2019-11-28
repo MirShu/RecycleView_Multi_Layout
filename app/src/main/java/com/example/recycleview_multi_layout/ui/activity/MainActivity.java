@@ -5,13 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.recycleview_multi_layout.R;
+import com.example.recycleview_multi_layout.base.Api;
+import com.example.recycleview_multi_layout.model.NewsModel;
 import com.example.recycleview_multi_layout.ui.fragment.main_fragment.NavigationFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
+
+import retrofit2.Retrofit;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
@@ -32,6 +44,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         transaction.replace(R.id.frame_content, mNavigationFragment);
 
     }
+
 
     private void setCurrentFragment() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

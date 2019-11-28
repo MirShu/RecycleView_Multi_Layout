@@ -3,9 +3,11 @@ package com.example.recycleview_multi_layout.ui.fragment.main_fragment;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -14,8 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recycleview_multi_layout.R;
 import com.example.recycleview_multi_layout.adapter.Adapter;
+import com.example.recycleview_multi_layout.base.Api;
+import com.example.recycleview_multi_layout.model.NewsModel;
 import com.example.recycleview_multi_layout.model.ResultModel;
 import com.google.gson.Gson;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,10 +38,12 @@ import java.util.List;
 
 public class MainHomeFragment extends Fragment {
     private RecyclerView mRvView;
+    private View mRootView;
     private Adapter mAdapter;
     private List<ResultModel.ResultBean> mList = new ArrayList<>();
     private static final String ARG_POSITION = "position";
-
+    private int positionType;
+    private String type;
 
     public static MainHomeFragment newInstance(int position) {
         MainHomeFragment newsChannelFragment = new MainHomeFragment();
@@ -62,18 +72,67 @@ public class MainHomeFragment extends Fragment {
     }
 
 
-
+    //类型,,top(头条，默认),shehui(社会),guonei(国内),guoji(国际),yule(娱乐),tiyu(体育)junshi(军事),keji(科技),caijing(财经),shishang(时尚)
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        mRvView = view.findViewById(R.id.home_news_rview);
+        mRootView = inflater.inflate(R.layout.fragment_home, container, false);
+        positionType = getArguments().getInt(ARG_POSITION);
+        mRvView = mRootView.findViewById(R.id.home_news_rview);
         mRvView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        getData();
-        return view;
+        if (positionType == 0) {
+            type = "top";
+        } else if (positionType == 1) {
+            type = "shehui";
+        } else if (positionType == 2) {
+            type = "guonei";
+        } else if (positionType == 3) {
+            type = "guoji";
+        } else if (positionType == 4) {
+            type = "yule";
+        } else if (positionType == 5) {
+            type = "tiyu";
+        } else if (positionType == 6) {
+            type = "junshi";
+        } else if (positionType == 7) {
+            type = "keji";
+        } else if (positionType == 8) {
+            type = "caijing";
+        } else if (positionType == 9) {
+            type = "shishang";
+        }
+        getData(type);
+        return mRootView;
     }
+    private void getData(String newsType) {
+        RequestParams params = new RequestParams(Api.TOUTIAO);
+        params.addBodyParameter("key=",Api.USERKEY);
+        params.addBodyParameter("type=",newsType);
+        x.http().post(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Gson gson = new Gson();
+                NewsModel newsModel = gson.fromJson(result, NewsModel.class);
 
-    private void getData() {
+                Log.i("ResultModel",newsModel.getResult().getData().get(0).getAuthor_name());
+
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+                Log.i("ResultModel",cex.toString());
+            }
+
+            @Override
+            public void onFinished() {
+            }
+        });
+
+
         try {
             String result = getJson(getActivity(), "data.json");
             Gson gson = new Gson();
@@ -85,7 +144,7 @@ public class MainHomeFragment extends Fragment {
             setMiddle(mRvView);
             setMiddle2(mRvView);
             mAdapter.notifyDataSetChanged();
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
     }

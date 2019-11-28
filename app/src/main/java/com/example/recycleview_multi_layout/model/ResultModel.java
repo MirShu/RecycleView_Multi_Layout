@@ -5,7 +5,6 @@ import java.util.List;
 
 public class ResultModel implements Serializable {
 
-
     private String now;
     private boolean ok;
     private List<ResultBean> result;

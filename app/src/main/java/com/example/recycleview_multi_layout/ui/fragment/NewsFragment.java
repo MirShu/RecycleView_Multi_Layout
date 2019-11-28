@@ -63,7 +63,7 @@ public class NewsFragment extends Fragment {
         scrollViewEx.setDividerColor(Color.TRANSPARENT);
         scrollViewEx.setTextSize((int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_SP, 15, dm));
-        scrollViewEx.setSelectedTextColor(Color.parseColor("#e6230f"));
+        scrollViewEx.setSelectedTextColor(Color.parseColor("#d1d1d1"));
         scrollViewEx.setTabBackground(0);
     }
 
