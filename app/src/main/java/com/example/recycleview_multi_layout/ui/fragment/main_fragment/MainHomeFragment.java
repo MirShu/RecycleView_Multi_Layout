@@ -114,7 +114,7 @@ public class MainHomeFragment extends Fragment {
                 Gson gson = new Gson();
                 NewsModel newsModel = gson.fromJson(result, NewsModel.class);
 
-                Log.i("ResultModel",newsModel.getResult().getData().get(0).getAuthor_name());
+                Log.i("ResultModel",result);
 
             }
 

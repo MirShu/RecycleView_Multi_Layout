@@ -16,46 +16,92 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/followed_tab_books"
-            android:text="教材"
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:drawablePadding="5dp"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/followed_tab_mystock"
-            android:text="小视频"
-            android:drawablePadding="5dp"
-            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/followed_tab_topic"
-            android:text="社会"
             android:gravity="center_horizontal"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type01"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/followed_tab_yingyonghao"
-            android:text="美食"
-            android:drawablePadding="5dp"
             android:gravity="center_horizontal"
-            android:textColor="#000000"
-            android:textSize="14sp" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type02"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type03"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -66,46 +112,82 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/icon_follow_top_enter_brand"
-            android:text="排行榜"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:drawablePadding="5dp"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/icon_follow_top_enter_category"
-            android:text="优惠日"
-            android:drawablePadding="5dp"
-            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type04"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/icon_follow_top_enter_define"
-            android:text="精选品"
             android:gravity="center_horizontal"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/icon_follow_top_enter_user"
-            android:text="白菜区"
-            android:drawablePadding="5dp"
             android:gravity="center_horizontal"
-            android:textColor="#000000"
-            android:textSize="14sp" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type02"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_type04"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教材"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -27,7 +27,6 @@ public class BaseBindViewHolder {
         list.add(R.mipmap.response03);
         list.add(R.mipmap.response04);
         list.add(R.mipmap.response05);
-        list.add(R.mipmap.response06);
         ((BaseViewHolder) holder).banner.setImages(list)
                 .setImageLoader(new GlideImageLoader())
                 .start();
@@ -58,8 +57,6 @@ public class BaseBindViewHolder {
             modelList.add(watermelon);
             Model pear = new Model("c_没人疼", R.mipmap.response05);
             modelList.add(pear);
-            Model grape = new Model("CJ~花花", R.mipmap.response06);
-            modelList.add(grape);
             Model pineapple = new Model("c_没人疼", R.mipmap.response01);
             modelList.add(pineapple);
             Model strawberry = new Model("c_没人疼", R.mipmap.response01);
