@@ -25,6 +25,12 @@ widget when you have data collections whose elements change at runtime based on 
 记录下自己参照网上一些大神例子写了个Demo。
 
 
+![2781551-9d5f6d5bf47cd76f](https://user-images.githubusercontent.com/13359093/209261570-d72f9589-a969-43e1-a180-700826de54a2.gif)
+
+### 里面想穿插多少种类型的item  就由自己的需求而定，包括很多面布局，不同类型的复杂页面可以扩散思维去设计自己代码。新闻类型的详情页底部，有列表或者底部还有新闻，是不是就都可以用这种方式来设计代码，一并的加载出来。
+
+![2781551-3a09f8f00f31cc6b](https://user-images.githubusercontent.com/13359093/209261579-c5efd100-938e-4eca-8a8f-f22184883b37.gif)
+
 ```
 //主页面
 
@@ -280,13 +286,6 @@ widget when you have data collections whose elements change at runtime based on 
 </LinearLayout>
 
 ```
-
-
-![2781551-9d5f6d5bf47cd76f](https://user-images.githubusercontent.com/13359093/209261570-d72f9589-a969-43e1-a180-700826de54a2.gif)
-
-### 里面想穿插多少种类型的item  就由自己的需求而定，包括很多面布局，不同类型的复杂页面可以扩散思维去设计自己代码。新闻类型的详情页底部，有列表或者底部还有新闻，是不是就都可以用这种方式来设计代码，一并的加载出来。
-
-![2781551-3a09f8f00f31cc6b](https://user-images.githubusercontent.com/13359093/209261579-c5efd100-938e-4eca-8a8f-f22184883b37.gif)
 
 这就是效果，一个RecyclerView完成的，甚至还可以做更复杂的布局，不同的样式。
 
