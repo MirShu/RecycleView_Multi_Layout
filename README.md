@@ -907,6 +907,7 @@ public class BaseBindViewHolder {
 
     }
 
+   // 这个地方的图片加载方式可以根据自己的需求或者自己的使用三方加载框架都可以替换  ImageLoader、Glide
     public class GlideImageLoader extends ImageLoader {
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
